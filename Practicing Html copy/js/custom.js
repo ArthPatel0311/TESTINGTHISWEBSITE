@@ -93,7 +93,7 @@ particlesJS("particle", {
         "size": 40,
         "duration": 2,
         "opacity": 8,
-        "speed": 3
+        "speed": 3,
       },
       "repulse": {
         "distance": 70,
@@ -107,7 +107,7 @@ particlesJS("particle", {
       }
     }
   },
-  "retina_detect": true
+  "retina_detect": true,
 });
 
 particlesJS("particle2", {

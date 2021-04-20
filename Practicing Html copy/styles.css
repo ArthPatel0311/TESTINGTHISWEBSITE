@@ -32,7 +32,7 @@ html {
   );
 
   background-size: 1000% 1000%;
-  animation: grad 30s ease-in infinite;
+  animation: grad 25s ease-in infinite;
 }
 
 #particle {
@@ -65,7 +65,7 @@ html {
 }
 
 .fa-adjust,
-.fa-home {
+.gg-home {
   color: rgb(255, 255, 255);
   position: relative;
   display: block;
@@ -81,9 +81,11 @@ html {
   transition-property: transform;
 }
 
-.fa-home {
+.gg-home {
+  position: relative;
   left: -20px;
   margin-left: -20px;
+  margin-top: 1px;
 }
 
 .gradient.dark,
@@ -99,7 +101,7 @@ html {
     rgba(92, 39, 33)
   );
   background-size: 1000% 1000%;
-  animation: grad 30s linear infinite;
+  animation: grad 25s linear infinite;
 }
 
 body {
@@ -111,13 +113,13 @@ body.dark {
 
 #AboutMe.dark {
   background-color: #21262c;
-  box-shadow: 0px 0px 23px 6.6px rgb(255, 255, 255);
+  box-shadow: 0px 0px 23px 6.6px rgb(255, 255, 255, 0.9);
 }
 
 #Projects.dark {
   color: white;
   background-color: #21262c;
-  box-shadow: 0px 0px 23px 6.6px rgba(255, 255, 255);
+  box-shadow: 0px 0px 23px 6.6px rgba(255, 255, 255, 0.9);
 }
 
 .fa-adjust {
@@ -138,7 +140,7 @@ body.dark {
 
 .projs.dark {
   background-color: #21262c;
-  box-shadow: 0px 0px 20px 3.3px rgba(255, 255, 255);
+  box-shadow: 0px 0px 20px 3.3px rgba(255, 255, 255, 0.9);
 }
 
 button {
@@ -270,6 +272,7 @@ a.link:hover {
 }
 #boutmecont {
   height: 50vh;
+  min-height: 400px;
   width: 100%;
 }
 .contactcont {
@@ -291,10 +294,8 @@ a.link:hover {
   display: flex;
   box-shadow: 0px 0px 23px 6.6px grey;
   position: relative;
-  top: 35%;
-
+  top: 25%;
   width: 80%;
-
   z-index: 10;
   flex-direction: column;
   align-items: center;
@@ -411,7 +412,6 @@ input {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 23px 3.3px grey;
-
   z-index: 2;
 }
 
@@ -459,7 +459,7 @@ input {
 
 #Projects,
 #AboutMe {
-  min-width: 277px;
+  min-width: 23rem;
 }
 #AboutMe,
 #Projects {
@@ -467,6 +467,7 @@ input {
 }
 
 .projs {
+  top: -10%;
   height: 20rem;
 }
 
@@ -478,6 +479,9 @@ input {
   }
   .projcont {
     min-height: 150.4rem;
+  }
+  #Projects {
+    top: 2%;
   }
   .projs {
     height: 25rem;
@@ -492,7 +496,7 @@ input {
 
 .fa-envelope:hover,
 .fa-github:hover,
-.fa-home:hover {
+.gg-home:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.3);
 }
