@@ -23,8 +23,10 @@ html {
   position: relative;
   background: linear-gradient(
     120deg,
-    rgb(194, 211, 9),
+    rgb(193, 209, 12),
+    #4ac82a,
     rgb(26, 223, 134),
+    #04d8c3,
     rgb(36, 168, 196),
     rgb(6, 97, 226),
     rgb(213, 0, 253),
@@ -65,7 +67,7 @@ html {
 }
 
 .fa-adjust,
-.gg-home {
+.fa-igloo {
   color: rgb(255, 255, 255);
   position: relative;
   display: block;
@@ -81,11 +83,10 @@ html {
   transition-property: transform;
 }
 
-.gg-home {
+.fa-igloo {
   position: relative;
   left: -20px;
   margin-left: -20px;
-  margin-top: 1px;
 }
 
 .gradient.dark,
@@ -95,8 +96,8 @@ html {
     #000000,
     #21262c,
     rgb(37, 58, 80),
-    rgb(113, 82, 81),
     rgb(189, 93, 85),
+    rgb(113, 82, 81),
     rgba(128, 70, 66),
     rgba(92, 39, 33)
   );
@@ -467,7 +468,6 @@ input {
 }
 
 .projs {
-  top: -10%;
   height: 20rem;
 }
 
@@ -480,9 +480,7 @@ input {
   .projcont {
     min-height: 150.4rem;
   }
-  #Projects {
-    top: 2%;
-  }
+
   .projs {
     height: 25rem;
   }

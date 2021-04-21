@@ -18,7 +18,7 @@
 
     <nav id = "nav" > 
         <button class = "buttondark"><i class="fas fa-adjust" id = "icon"></i></button>
-        <a href="#"><button ><i class="gg-home" id = "icon" ></i></button>
+        <a href="#"><button ><i class="fas fa-igloo" id = "icon" ></i></button>
         </a>
         <a href="#dropmenu" id= "dropmenu">&#x3c;Arth Patel/&#x3e;    
         <div class="navitems">
@@ -221,7 +221,7 @@
 <script>
    
 $(document).ready(function () {
-
+var countClick = 1;
         $(window).scroll(function () {
             var blacknav = $('#boutmecont').offset().top;
             var blacknavHeight = $('#boutmecont').height();
@@ -240,72 +240,58 @@ $(document).ready(function () {
             const icon = document.querySelectorAll("#icon");
 
             
-            if (menu_pos > blacknav && menu_pos < (blacknavHeight + blacknav2Height + blacknav2  + blacknav)
-                    && (exists ==  null)) {
-                var countTap = 1;
-                         
-                    $('.buttondark').click(function () {
-                        if (countTap == 1) {
-                              menu.style.color = "white";
-                                 for (var i = 0; i < icon.length; i++) {
-                                icon[i].style.color = "white";
-                            }
-                            navItems.forEach((link, index) => {
-
-                                link.style.color = "white";
-
-                            });
-                            countTap = 0;
-                        } else {
-                            for (var i = 0; i < icon.length; i++) {
-                                icon[i].style.color = "black";
-                            }
-                              navItems.forEach((link, index) => {
-
-                                link.style.color = "black";
-
-                            });
-                           menu.style.color = "black";
-                            countTap++;
-                        }
-                    });
+            if (menu_pos > blacknav && menu_pos < (blacknavHeight + blacknav2Height + blacknav2  + blacknav)) {
                
 
-                for (var i = 0; i < icon.length; i++) {
-                    icon[i].style.color = "black";
+
+                if (exists == null) {
+                    for (var i = 0; i < icon.length; i++) {
+                        icon[i].style.color = "black";
+                    }
+
+                    menu.style.color = "black";
+                    navItems.forEach((link, index) => {
+
+                        link.style.color = "black";
+
+                    });
                 }
+                         
+                $(document).ready(function () {
+                    $('.buttondark').click(function () {
+                          if ( exists == null && countClick == 1 ) {
+                              menu.style.color = "white";
+                              for (var i = 0; i < icon.length; i++) {
+                                   icon[i].style.color = "white";
+                              }
+                                  navItems.forEach((link, index) => {
 
-                menu.style.color = "black";
-                navItems.forEach((link, index) => {
+                                  link.style.color = "white";
 
-                    link.style.color = "black";
+                              });
+                                countClick = 0;
+                            
+                          } else if (exists && countClick == 0){
+                              countClick = 1;
+                              for (var i = 0; i < icon.length; i++) {
+                                   icon[i].style.color = "white";
+                              }
+                                  navItems.forEach((link, index) => {
 
+                                  link.style.color = "white";
+
+                              });
+                               menu.style.color = "white";
+                          }
+                               
+                        
+                            
+                        
+                    });
                 });
-
-              
             }
 
             else {
- 
-              $('.buttondark').click(function () {
-                    countTap = 1;
-                    if (countTap == 1) {
-                        menu.style.color = "white";
-                        for (var i = 0; i < icon.length; i++) {
-                            icon[i].style.color = "white";
-                             
-                        }
-                        navItems.forEach((link, index) => {
-
-                            link.style.color = "white";
-                            
-                        });
-                        countTap = 0;
-                    } else {
-                        countTap++;
-                    }
-                });
-              
                 menu.style.color = "white";
                  for (var i = 0; i < icon.length; i++) {
                     icon[i].style.color = "white";
