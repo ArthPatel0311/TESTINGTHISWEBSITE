@@ -67,12 +67,14 @@ html {
 }
 
 .fa-adjust,
-.fa-igloo {
+.fa-igloo,
+.fa-github,
+.fa-envelope {
   color: rgb(255, 255, 255);
-  position: relative;
+  /* position: relative;
   display: block;
   border: none;
-
+*/
   -webkit-transition-duration: 0.8s;
   -moz-transition-duration: 0.8s;
   -o-transition-duration: 0.8s;
@@ -122,7 +124,13 @@ body.dark {
   background-color: #21262c;
   box-shadow: 0px 0px 23px 6.6px rgba(255, 255, 255, 0.9);
 }
+#Proj.dark {
+  color: white;
+}
 
+#Proj a .fa-github.dark {
+  color: white;
+}
 .fa-adjust {
   animation: 0.5s linear forwards;
 }
@@ -338,7 +346,15 @@ a.link:hover {
 }
 #AboutMe a:hover {
   transition: all 0.2s ease-in-out;
-  transform: scale(1.3);
+  animation: space 0.5s forwards;
+}
+@keyframes space {
+  from {
+    letter-spacing: 0em;
+  }
+  to {
+    letter-spacing: 0.3em;
+  }
 }
 #wrap {
   position: relative;
@@ -387,6 +403,14 @@ input {
   letter-spacing: 0.05em;
   color: black;
   top: 40%;
+}
+
+#Projects .fa-github {
+  position: absolute;
+  color: black;
+
+  left: 47%;
+  top: 60%;
 }
 
 .flexcont {
@@ -465,6 +489,7 @@ input {
 #AboutMe,
 #Projects {
   min-height: 205px;
+  overflow: auto;
 }
 
 .projs {
@@ -486,16 +511,10 @@ input {
   }
 }
 
-/*#Projects:hover,
-#AboutMe:hover {
-  transition: all 0.2s ease-in-out;
-  transform: scale(1.1);
-}*/
-
 .fa-envelope:hover,
 .fa-github:hover,
-.gg-home:hover {
-  transition: all 0.2s ease-in-out;
+.fa-igloo:hover {
+  transition: all 0.3s ease-in-out;
   transform: scale(1.3);
 }
 
@@ -590,4 +609,10 @@ input {
   .projcont {
     top: 100px;
   }
+}
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
 }

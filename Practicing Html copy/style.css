@@ -1,31 +1,85 @@
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(200px);
-  }
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
-li a:link,
-li a:visited {
+#bigdiv {
+  position: absolute;
+
+  background: linear-gradient(
+    120deg,
+    rgb(193, 209, 12),
+    #4ac82a,
+    rgb(26, 223, 134),
+    #04d8c3,
+    rgb(36, 168, 196),
+    rgb(6, 97, 226),
+    rgb(213, 0, 253),
+    rgb(248, 55, 76)
+  );
+  height: 50vh;
+  width: 100vw;
+}
+body {
+  background-color: beige;
+  height: 10000px;
+}
+#nav {
+  position: fixed;
+  margin-top: 10px;
+
+  z-index: 20;
+  height: 90px;
+  width: calc(100% - 33px);
+  margin-left: 16.5px;
+  margin-right: 16.5px;
+}
+
+#links li {
+  color: red;
+  display: inline-block;
+  background-color: transparent;
+  margin-right: 16.5px;
+}
+
+.link:link,
+.link:visited {
+  font-size: 26.4px;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  text-decoration: none;
   color: black;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  width: 50px;
+  height: auto;
 }
 
-#nav-links li {
-  list-style: none;
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  float: right;
 }
-
-.burger {
+.fa-adjust,
+.fa-igloo,
+.fa-github,
+.fa-envelope {
+  color: blue;
+  /* position: relative;
   display: block;
-  width: 200px;
-  height: 100px;
-  background-color: blue;
-}
-
-.navl {
-  font-size: 20px;
-  transform: translateX(20px);
+  border: none;
+*/
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
 }
