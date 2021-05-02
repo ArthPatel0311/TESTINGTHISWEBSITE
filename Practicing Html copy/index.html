@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Arth Patel</title>
+    
+    <script src="https://kit.fontawesome.com/0e784927ba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href='https://css.gg/home.css' rel='stylesheet'>
+</head>
+<body>
+
+
+
+    <nav id = "nav" > 
+        <button class = "buttondark buttondark2"><i class="fas fa-adjust" id = "icon"></i></button>
+        <a href="#"><button ><i class="fas fa-igloo" id = "icon" ></i></button>
+        </a>
+        <a href="#dropmenu" id= "dropmenu">&#x3c;Arth Patel/&#x3e;    
+        <div class="navitems">
+        <ul id= "links"  >
+            <li><a href="#boutmecont" class="link">Me</a></li>
+            <li><a href="#wrap" class="link">Projects</a></li>
+            <li><a href="#" class="link">Resume</a></li>
+            <li><a href="#contact" class="link">Contact</a></li>
+            
+        </ul>
+        </div>
+        </a>
+        
+    </nav>
+    
+    <div class="gradient">
+    <div id="particle">
+    
+    </div>
+    </div>
+
+        <div id="orbit-container">
+        <h6 id="name">Arth Patel</h6>
+        <div class="Cont">
+        <a href="https://github.com/patelarth0311" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x" style="font-size: 6.6rem;"></i></a>
+        <h6 id="greetings">Hello</h6>
+        </div>
+</div>
+
+
+<div id="boutmecont">
+        <div id = "AboutMe" >
+            <h6>Me</h6>
+            <p> Creator, Developer, Student </p>      
+            <a href="#"><i class="fa fa-file-text" aria-hidden="true" style="font-size: 2.5rem;"></i></a>
+        </div>
+    </div>
+
+    <div class="projcont">
+        <div id="Projects">
+<div id = "Proj">
+    <h6>Projects</h6>
+    <p>See some of my works!</p>
+    <a href="https://github.com/patelarth0311" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x"
+            style="font-size: 3rem;"></i></a>
+</div>
+</div>
+<div id ="wrap">
+<div class="flexcont">
+    <div class="projs"></div>
+    <div class="projs"></div>
+    <div class="projs"></div>
+    <div class="projs"></div>
+
+</div>
+</div>
+</div>
+<div class="contactcont">
+    <div id="particle2">
+    </div>
+    <div id="contact">
+        <h6>Contact</h6>
+        <p>Reach out!</p>
+        <a href="mailto:patelarth0311@gmail.com"><i class="fas fa-envelope" style="font-size: 3rem;"></i></a>
+    </div>
+    
+</div>
+
+
+<!---
+    SCRIPT
+--> 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+   
+    $(document).ready(function () {
+
+        $('.buttondark').click(function () {
+
+    
+       var blacknav = $('#boutmecont').offset().top;
+            var blacknavHeight = $('#boutmecont').height();
+
+
+            var blacknav2 = $('#wrap').offset().top;
+            var blacknav2Height = $('#wrap').height();
+
+            var menu_pos = $('#dropmenu').offset().top;
+            var menu_height = $('#dropmenu').height();
+
+
+            var scroll = $(window).scrollTop();
+            var menu = document.getElementById('dropmenu');
+
+            const navItems = document.querySelectorAll('#links li a');
+            exists = document.querySelector("body.dark");
+            const icon = document.querySelectorAll("#icon");
+
+
+                $('.gradient').toggleClass('dark'),
+                $('.contactcont').toggleClass('dark'),
+                $('body').toggleClass('dark'),
+                $('#AboutMe').toggleClass('dark'),
+                $('#Projects').toggleClass('dark'),
+                $('.projs').toggleClass('dark'),
+                $('h6').toggleClass('dark'),
+                $('p').toggleClass('dark'),
+                $('a').toggleClass('dark'),
+                $('.fa-adjust').toggleClass('flip');
+                $('#Proj a .fa-github').toggleClass('dark');
+                $('#AboutMe a .fa-file-text').toggleClass('dark')
+        
+                if (menu_pos > blacknav && (menu_pos < blacknavHeight + blacknav2Height + blacknav2 + blacknav) && exists == null) {
+                      
+                        menu.style.color = "white";
+                    for (var i = 0; i < icon.length; i++) {
+                        icon[i].style.color = "white";
+                    }
+                    navItems.forEach((link, index) => {
+
+                        link.style.color = "white";
+
+                    });
+                } else if (menu_pos > blacknav && (menu_pos < blacknavHeight + blacknav2Height + blacknav2 + blacknav) && exists != null) {
+                              for (var i = 0; i < icon.length; i++) {
+                        icon[i].style.color = "black";
+                    }
+
+                    menu.style.color = "black";
+                    navItems.forEach((link, index) => {
+
+                        link.style.color = "black";
+
+                    });
+                }
+
+        });
+
+    });
+
+</script>
+
+
+
+<script>
+ 
+   
+
+
+    var clickCount = 1;
+        var showElem = document.getElementById('dropmenu');
+        var hideElem = document.getElementById('links');
+        var slidedown = document.getElementById('links');
+        var clickCount2 = 1;
+
+      
+        
+
+    if (matchMedia) {
+        
+        const mq = window.matchMedia("(max-width: 920px)");
+        mq.addListener(drop);
+        drop(mq);
+
+        const mq2 = window.matchMedia("(min-width: 920px)");
+
+
+        mq2.addListener(show);
+        show(mq2);
+
+        
+            function show(mq2) {
+
+                
+               
+
+                if (mq2.matches) {
+                    const navLinks = document.querySelectorAll('#links li');
+                    navLinks.forEach((link, index) => {
+
+                    link.style.animation = `fade 1.5s ease-in forwards  ${index / 7}s `;
+
+                    });
+                    hideElem.style = 'display: flex, flex-direction:column';
+                      
+                       showElem.onclick = function () {
+                        if (clickCount2 == 1) {
+                            hideElem.style = 'display: none';
+                            clickCount2 = 0;
+                        } else {
+                             hideElem.style = 'display: flex, flex-direction:column';
+                            clickCount2++;
+                        }
+                    }
+              
+            } else {
+                 hideElem.style = 'display: none';
+                 clickCount = 1;
+            }
+
+
+         
+
+            
+        };
+       
+    
+
+
+    function drop(mq) {
+
+        
+    
+            showElem.onclick = function () {
+                
+
+                
+            
+                 if (mq.matches) {
+                      const navLinks = document.querySelectorAll('#links li');
+                     navLinks.forEach((link, index) => {
+                       
+                         link.style.animation = `fadeDown 1.5s ease-in forwards  ${index / 7}s `;
+                         
+
+                     });
+              
+                if (clickCount == 1) {
+                   
+                    hideElem.style = 'display: flex, flex-direction:column';
+                    clickCount=0;
+                     
+                } else {
+                    clickCount++;
+                    hideElem.style.display = 'none';
+                }
+
+            }  
+        }
+            
+                
+            
+    };
+}
+</script>
+
+
+<script>
+    $(document).ready(function () {
+         if (matchMedia) {
+            
+    var blacknav = $('#boutmecont').offset().top;
+        var blacknavHeight = $('#boutmecont').height();
+
+
+        var blacknav2 = $('#wrap').offset().top;
+        var blacknav2Height = $('#wrap').height();
+
+        var menu_pos = $('#dropmenu').offset().top;
+        var menu_height = $('#dropmenu').height();
+
+
+        var scroll = $(window).scrollTop();
+        var menu = document.getElementById('dropmenu');
+
+        const navItems = document.querySelectorAll('#links li a');
+        exists = document.querySelector("body.dark");
+        const icon = document.querySelectorAll("#icon");
+
+       
+
+
+         }
+    });
+
+
+</script>
+
+
+<script>
+   
+   
+$(document).ready(function () {
+
+    
+   
+   var exists = document.querySelector("body.dark");
+   
+
+
+    
+        $(window).scroll(function () {
+            
+          
+            var blacknav = $('#boutmecont').offset().top;
+            var blacknavHeight = $('#boutmecont').height();
+
+
+            var blacknav2 = $('#wrap').offset().top;
+            var blacknav2Height = $('#wrap').height();
+
+            var menu_pos = $('#dropmenu').offset().top;
+            var menu_height = $('#dropmenu').height();
+
+            
+            var scroll = $(window).scrollTop();
+            var menu = document.getElementById('dropmenu');
+            
+            const navItems = document.querySelectorAll('#links li a');
+             exists = document.querySelector("body.dark");
+            const icon = document.querySelectorAll("#icon");
+
+           
+            if (menu_pos > blacknav && (menu_pos < blacknavHeight + blacknav2Height + blacknav2  + blacknav) && exists == null) {
+               
+
+               
+               
+                    for (var i = 0; i < icon.length; i++) {
+                        icon[i].style.color = "black";
+                    }
+
+                    menu.style.color = "black";
+                    navItems.forEach((link, index) => {
+
+                        link.style.color = "black";
+
+                    });
+                
+            } 
+
+            else  {
+             
+              
+                menu.style.color = "white";
+                 for (var i = 0; i < icon.length; i++) {
+                    icon[i].style.color = "white";
+                }
+                navItems.forEach((link, index) => {
+
+                    link.style.color = "white";
+
+                });
+            }
+
+        })
+        
+    })</script>
+
+
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script>
+
+
+$(document).ready(function () {
+
+    var messages = [],
+    index = 0;
+
+    messages.push('Hello');
+    messages.push('مرحبا ');
+    messages.push('やあ');
+    messages.push('हेलो');
+    messages.push('Bonjour');
+    messages.push('આવો');
+    messages.push('Hola');
+    messages.push('你好');
+    messages.push('สวัสดี');
+    messages.push('مَرْحَبًا');
+  
+
+    function loop() {
+
+
+        $('#greetings').html(messages[index]);
+        index++
+
+        if (index === messages.length) {
+            index = 0;
+        }
+
+        setTimeout(loop,2000);
+
+
+    }
+    loop();
+
+
+
+
+
+});
+
+
+
+
+
+
+</script>
+
+<script type="text/javascript" src="js/particles.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+
+
+</body>
+</html>

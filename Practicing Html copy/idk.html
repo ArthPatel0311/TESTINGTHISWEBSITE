@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0e784927ba.js" crossorigin="anonymous"></script>
+  
+    <link href='https://css.gg/home.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css" />
+<body>
+
+    <div id = "bigdiv">
+
+    </div>
+    <div id="div">
+    
+    </div>
+    <nav id="nav">
+        <button class="buttondark"><i class="fas fa-adjust" id="icon"></i></button>
+        <a href="#"><button><i class="fas fa-igloo" id="icon"></i></button>
+        </a>
+        <a href="#dropmenu" id="dropmenu">&#x3c;Arth Patel/&#x3e;
+            <div class="navitems">
+                <ul id="links">
+                    <li><a href="#boutmecont" class="link">Me</a></li>
+                    <li><a href="#wrap" class="link">Projects</a></li>
+                    <li><a href="#" class="link">Resume</a></li>
+                    <li><a href="#contact" class="link">Contact</a></li>
+    
+                </ul>
+            </div>
+        </a>
+    
+    </nav>
+
+    <script>
+       $(document).ready(function () {
+           var menu = document.getElementById('dropmenu');
+           const icon = document.querySelectorAll("#icon");
+             var menu_pos = $('#dropmenu').offset().top;
+             var menu_height = $('#bigdiv').height();
+   $('.buttondark').click(function () {
+
+      var x = event.clientX;
+       var y = event.clientY;
+
+
+
+       if ( menu_height > menu_pos) {
+
+      for (var i = 0; i < icon.length; i++) {
+           icon[i].style.color = "red";
+       }
+     
+           
+    } else  {
+
+           for (var i = 0; i < icon.length; i++) {
+               icon[i].style.color = "green";
+           }
+    }
+            
+            console.log(menu_height);
+            console.log(menu);
+           
+
+        
+           
+        
+            
+   
+        });
+    });
+    </script>
+
+</body>
+
+</html>
