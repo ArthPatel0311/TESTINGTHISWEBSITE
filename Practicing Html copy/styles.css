@@ -650,8 +650,8 @@ a:link,
 a:active {
   text-decoration: none;
 }
-@media all and (orientation:landscape) and (max-width: 850px)  {
+@media all and (orientation:landscape) and (max-width: 920px)  {
   .Cont {
-    top: -3.5rem;
+    top: -3.7rem;
   }
 }
