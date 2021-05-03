@@ -24,9 +24,9 @@ html {
   background: linear-gradient(
     120deg,
     rgb(176, 190, 16),
-    #4ac82a,
-    rgb(28, 219, 133),
-    #00c0ad,
+    #43b626,
+    rgb(25, 197, 120),
+    #01ac9b,
     rgb(36, 168, 196),
     rgb(32, 112, 224),
     rgb(213, 0, 253),
@@ -237,6 +237,7 @@ a.link:hover {
     flex-direction: column;
     margin-bottom: 16.5px;
     visibility: hidden;
+   
   }
 
   #dropmenu {
@@ -564,8 +565,8 @@ text-align: center;
 .fa-github {
   margin: 1.8rem;
   color: rgb(255, 255, 255);
+ 
 }
-
 
 
 @media (min-height: 918px) {
@@ -652,9 +653,29 @@ a:active {
 @media all and (orientation:landscape) and (max-width: 1300px)  and (max-height: 500px) {
   .Cont {
     top: -3.7rem;
-    top: 50%;
+   
+  
   }
   .fa-github {
      margin: 1.2rem;
+     z-index: 100;
   }
+}
+
+@media (max-height: 500px) { 
+  .Cont {
+  top: -3.7rem;
+}
+
+.fa-github {
+   margin: 1.2rem;
+   z-index: 100;
+   font-size: 3.3rem;
+}
+
+.Cont a  .fa-github{
+
+
+}
+
 }
