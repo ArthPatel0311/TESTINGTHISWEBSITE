@@ -23,12 +23,12 @@ html {
   position: relative;
   background: linear-gradient(
     120deg,
-    rgb(193, 209, 12),
+    rgb(176, 190, 16),
     #4ac82a,
-    rgb(26, 223, 134),
-    #04d8c3,
+    rgb(28, 219, 133),
+    #00c0ad,
     rgb(36, 168, 196),
-    rgb(6, 97, 226),
+    rgb(32, 112, 224),
     rgb(213, 0, 253),
     rgb(248, 55, 76)
   );
@@ -189,7 +189,7 @@ button {
 .link:link,
 .link:visited {
   font-size: 26.4px;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   text-decoration: none;
   color: white;
@@ -214,7 +214,7 @@ a.link:hover {
 #dropmenu {
   float: left;
   font-size: 26.4px;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   text-decoration: none;
   color: white;
@@ -262,7 +262,6 @@ a.link:hover {
   height: 30vh;
   background: transparent;
 }
-
 #name, #greetings {
   font-size: 4rem;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
@@ -315,6 +314,7 @@ a.link:hover {
   align-items: center;
   text-align: center;
   
+  
 }
 
 #AboutMe h6 {
@@ -322,7 +322,7 @@ a.link:hover {
   font-size: 35px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   color: black;
   top: 5.6%;
@@ -333,20 +333,27 @@ a.link:hover {
   font-size: 26.4px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   color: black;
+  
   top: 40%;
 }
 
 #AboutMe a .fa-file-text {
   position: absolute;
+  
   color: black;
-
+  
   text-decoration: none;
-  left: 0%;
-  right: 0%;
-  top: 70%;
+  z-index: 10;
+top: 65%;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
 }
 
 #wrap {
@@ -373,7 +380,7 @@ a.link:hover {
   font-size: 35px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   color: black;
   width: 100%;
@@ -392,7 +399,7 @@ input {
   font-size: 26.4px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   color: black;
   top: 40%;
@@ -400,11 +407,18 @@ input {
 
 #Projects .fa-github {
   position: absolute;
+  
   color: black;
-
-  left: 0%;
-  right: 0%;
-  top: 63%;
+  
+  text-decoration: none;
+  z-index: 10;
+top: 55%;
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
 }
 
 .flexcont {
@@ -423,7 +437,10 @@ input {
 }
 
 .projs {
-  text-align: right, bottom;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
   width: 20rem;
   display: flex;
   position: relative;
@@ -432,6 +449,10 @@ input {
   border-radius: 5px;
   box-shadow: 0px 0px 23px 3.3px grey;
   z-index: 2;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .projs::before {
@@ -453,7 +474,7 @@ input {
   font-size: 35px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   color: white;
   top: 5%;
@@ -464,7 +485,7 @@ input {
   font-size: 24.4px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
-  font-weight: 100;
+  font-weight: 120;
   letter-spacing: 0.05em;
   color: white;
   top: 40%;
@@ -478,7 +499,7 @@ input {
 
 #Projects,
 #AboutMe {
-  min-width: 23rem;
+  min-width: 22.5rem;
 
 }
 #AboutMe,
@@ -489,6 +510,17 @@ input {
 
 .projs {
   height: 20rem;
+}
+
+.projs h6 {
+  position: absolute;
+  font-size: 24.4px;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  font-weight: 120;
+  letter-spacing: 0.05em;
+  
+  
 }
 
 /*1010*/
@@ -531,7 +563,7 @@ input {
 }
 
 .fa-github {
-  margin-bottom: 3rem;
+  margin: 1.8rem;
   color: rgb(255, 255, 255);
 }
 
@@ -544,6 +576,10 @@ input {
 }
 
 @media (max-width: 755px) {
+
+  .fa-github {
+    margin: 1.2rem;
+  }
   .navitems {
     top: 18.5px;
   }
@@ -613,4 +649,9 @@ a:visited,
 a:link,
 a:active {
   text-decoration: none;
+}
+@media all and (orientation:landscape) and (max-width: 850px)  {
+  .Cont {
+    top: -3.5rem;
+  }
 }

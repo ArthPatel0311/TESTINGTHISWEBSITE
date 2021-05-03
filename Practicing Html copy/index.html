@@ -41,8 +41,9 @@
     </div>
 
         <div id="orbit-container">
-        <h6 id="name">Arth Patel</h6>
+        
         <div class="Cont">
+            <h6 id="name">Arth Patel</h6>
         <a href="https://github.com/patelarth0311" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x" style="font-size: 6.6rem;"></i></a>
         <h6 id="greetings">Hello</h6>
         </div>
@@ -68,7 +69,7 @@
 </div>
 <div id ="wrap">
 <div class="flexcont">
-    <div class="projs"></div>
+    <div class="projs"><h6>SOON</h6></div>
     <div class="projs"></div>
     <div class="projs"></div>
     <div class="projs"></div>
@@ -381,22 +382,22 @@ $(document).ready(function () {
     index = 0;
 
     messages.push('Hello');
-    messages.push('مرحبا ');
+    messages.push('مرحبا');
     messages.push('やあ');
     messages.push('हेलो');
     messages.push('Bonjour');
     messages.push('આવો');
     messages.push('Hola');
-    messages.push('你好');
+    messages.push('Kamusta');
     messages.push('สวัสดี');
-    messages.push('مَرْحَبًا');
-  
+    messages.push('你好');
+
 
     function loop() {
 
 
         $('#greetings').html(messages[index]);
-        index++
+        index++;
 
         if (index === messages.length) {
             index = 0;
