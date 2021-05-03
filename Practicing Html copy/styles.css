@@ -649,9 +649,10 @@ a:link,
 a:active {
   text-decoration: none;
 }
-@media all and (orientation:landscape) and (max-width: 1010px)  and (max-height: 500px) {
+@media all and (orientation:landscape) and (max-width: 1300px)  and (max-height: 500px) {
   .Cont {
     top: -3.7rem;
+    top: 50%;
   }
   .fa-github {
      margin: 1.2rem;
