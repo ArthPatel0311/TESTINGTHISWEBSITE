@@ -24,8 +24,8 @@ html {
   background: linear-gradient(
     120deg,
     rgb(176, 190, 16),
-    #43b626,
-    rgb(25, 197, 120),
+    #40af24,
+    rgb(21, 189, 113),
     #01ac9b,
     rgb(36, 168, 196),
     rgb(32, 112, 224),
@@ -35,7 +35,7 @@ html {
   );
 
   background-size: 1000% 1000%;
-  animation: grad 25s ease-in infinite;
+  animation: grad 25s ease infinite;
 }
 
 #particle {
@@ -189,12 +189,14 @@ html {
   background: linear-gradient(
     125deg,
     #000000,
-    #21262c,
     rgb(37, 58, 80),
     rgb(189, 93, 85),
+    rgb(142,120,104),
     rgb(113, 82, 81),
+    rgba(76,54,41),
     rgba(128, 70, 66),
     rgba(92, 39, 33)
+   
   );
   background-size: 1000% 1000%;
   animation: grad 25s linear infinite;
