@@ -9,13 +9,14 @@
   background: linear-gradient(
     120deg,
     rgb(193, 209, 12),
-    #4ac82a,
+    #42b326,
     rgb(26, 223, 134),
-    #04d8c3,
+    #00b8a5,
     rgb(36, 168, 196),
-    rgb(6, 97, 226),
+    rgb(39, 110, 209),
     rgb(213, 0, 253),
-    rgb(248, 55, 76)
+    rgb(248, 55, 76),
+    rgb(251, 86, 7)
   );
   height: 50vh;
   width: 100vw;
@@ -65,21 +66,4 @@ button {
   outline: inherit;
   float: right;
 }
-.fa-adjust,
-.fa-igloo,
-.fa-github,
-.fa-envelope {
-  color: blue;
-  /* position: relative;
-  display: block;
-  border: none;
-*/
-  -webkit-transition-duration: 0.8s;
-  -moz-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-}
+
