@@ -19,6 +19,7 @@ html {
 
 .gradient,
 .contactcont {
+  min-height: 300px;
   overflow-x: hidden;
   position: relative;
   background: linear-gradient(
@@ -784,4 +785,9 @@ a:active {
    z-index: 100;
 }
 
+}
+@media (max-height: 200px) { 
+#orbit-container{
+  margin-top: 60px;
+}
 }
