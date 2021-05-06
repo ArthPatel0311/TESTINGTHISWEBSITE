@@ -381,6 +381,7 @@ a.link:hover {
   height: 50vh;
   min-height: 400px;
   width: 100%;
+  
 }
 .contactcont {
   height: 10vh;
@@ -395,6 +396,7 @@ a.link:hover {
 }
 
 #AboutMe {
+  overflow: hidden;
   height: 25vh;
   background-color: white;
   border-radius: 3.3px;
@@ -406,7 +408,7 @@ a.link:hover {
   z-index: 10;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+
   
   
 }
@@ -420,6 +422,7 @@ a.link:hover {
   letter-spacing: 0.05em;
   color: black;
   top: 5.6%;
+  
 }
 
 #AboutMe p {
@@ -430,7 +433,6 @@ a.link:hover {
   font-weight: 120;
   letter-spacing: 0.05em;
   color: black;
-  
   top: 40%;
 }
 
@@ -443,18 +445,22 @@ a.link:hover {
   z-index: 10;
 top: 65%;
 position: absolute;
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+left: 39%;
+right: 39%;
 text-align: center;
+
 }
+
+
 
 #wrap {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 #Projects {
+
+  overflow: hidden;
   height: 25vh;
   border-radius: 3.3px;
   display: flex;
@@ -467,6 +473,7 @@ text-align: center;
   text-align: center;
   top: 5%;
   background-color: white;
+
 }
 
 #Proj h6 {
@@ -477,8 +484,9 @@ text-align: center;
   font-weight: 120;
   letter-spacing: 0.05em;
   color: black;
-  width: 100%;
+ 
   left: 0px;
+  right: 0px;
   top: 5.6%;
 }
 
@@ -487,8 +495,7 @@ input {
 }
 
 #Proj p {
-  width: 100%;
-  left: 0px;
+ 
   position: absolute;
   font-size: 26.4px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
@@ -497,22 +504,21 @@ input {
   letter-spacing: 0.05em;
   color: black;
   top: 40%;
+  left: 0px;
+  right: 0px;
+
 }
 
-#Projects .fa-github {
+#Proj .fa-github {
   position: absolute;
-  
   color: black;
-  
   text-decoration: none;
-  z-index: 10;
-top: 55%;
-position: absolute;
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
-text-align: center;
+
+top: 50%;
+
+left: 39%;
+right: 39%;
+margin-top: 1.5rem;
 }
 
 .flexcont {
@@ -774,7 +780,7 @@ a:active {
 }
 
 .fa-github {
-   margin: 0rem;
+   margin: .38rem;
    z-index: 100;
 }
 

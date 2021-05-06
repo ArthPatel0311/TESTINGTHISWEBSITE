@@ -18,7 +18,7 @@ particlesJS("particle", {
         "color": "#000000"
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 50
       },
       "image": {
         "src": "img/github.svg",
@@ -48,7 +48,7 @@ particlesJS("particle", {
     },
     "line_linked": {
       "enable": true,
-      "distance": 70,
+      "distance": 75,
       "color": "#ffffff",
       "opacity": 0.5,
       "width": 1
@@ -160,7 +160,7 @@ particlesJS("particle2", {
     },
     "line_linked": {
       "enable": true,
-      "distance": 70,
+      "distance": 75,
       "color": "#ffffff",
       "opacity": 0.5,
       "width": 1
