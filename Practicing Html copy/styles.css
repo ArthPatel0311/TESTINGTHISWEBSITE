@@ -188,19 +188,18 @@ html {
 .gradient.dark,
 .contactcont.dark {
   background: linear-gradient(
-    125deg,
+    120deg,
+    rgb(142,120,104),
     #000000,
     rgb(37, 58, 80),
+    #2d485a,
     rgb(189, 93, 85),
-    rgb(142,120,104),
     rgb(113, 82, 81),
-    rgba(76,54,41),
-    rgba(128, 70, 66),
-    rgba(92, 39, 33)
-   
+    rgba(128, 70, 66)
+  
   );
   background-size: 1000% 1000%;
-  animation: grad 25s linear infinite;
+  animation: grad 25s ease-in infinite;
 }
 
 body {
