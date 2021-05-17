@@ -481,7 +481,7 @@ input {
 }
 
 #Proj p {
- 
+
   position: absolute;
   font-size: 26.4px;
   font-weight: 120;
@@ -520,7 +520,7 @@ margin-top: 1.5rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 20.4rem;
+  width: 100%;
   display: flex;
   position: relative;
   height: 22rem;
