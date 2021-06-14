@@ -59,7 +59,8 @@ background-color: #fbfbfd;
 }
 
   .gradient.light,
-  .contactcont.light {
+  .contactcont.light,
+  .skillset.light, .bg.light {
 
     background: linear-gradient(
       120deg,
@@ -73,6 +74,7 @@ background-color: #fbfbfd;
       rgb(248, 55, 76),
       rgb(251, 86, 7)
     );
+    animation: grad 25s ease-in-out infinite;
   
     background-size: 1000% 1000%;
  
@@ -96,8 +98,7 @@ background-color: #fbfbfd;
   #boutmecont a.light,
   .projs h6.light,
   .projs p.light,
-  #Skills h6.light,
-  .skillset h6.light{
+  #Skills h6.light{
     color: black;
   }
   .projs .fa-github.light, #boutmecont a .fa-file-text.light,
@@ -117,7 +118,7 @@ background-color: #fbfbfd;
     #boutmecont.light, #Skills.light {
       background-color: white;
     }
-    .projs.light, .skill.light, .skillset.light  {
+    .projs.light, .skill.light  {
       background-color: white;
       box-shadow: 0px 0px 20px 2.3px grey;
     }

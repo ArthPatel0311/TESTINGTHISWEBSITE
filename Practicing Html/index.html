@@ -59,9 +59,14 @@
 
 <div id="boutmecont">
     <h6>Me</h6>
+   
+    <div class="bg"></div>
+    <img class="bitme1" src="IMG_3746.JPG" alt="bitme" />
     <p> Developer, creator and student who enjoys turning his imaginations into something
         tangible. </p> 
+
         <a href="ArthResume.pdf" target="_blank" rel="noopener noreferrer" ><i class="fa fa-file-text" aria-hidden="true" style="font-size: 2.5rem;"></i></a>
+        
     </div>
     <div class="projcont">
         <div id="Projects">
@@ -94,12 +99,14 @@
         <h6>Skills</h6>
     </div>
     <div class="skillset">
+        <div id="particle3">
+        </div>
         <h6>Languages</h6>
     </div>
-    <div id="flexskillcont">
+    <div id="flexskillLangcont">
         <div class="skill">
 
-            <img class="ionicon" src="logo-javascript.svg" alt="Java" />
+            <img class="ionicon" src="logo-javascript.svg" alt="JS" />
              
         </div>
         <div class="skill">
@@ -107,7 +114,26 @@
         </div>
         <div class="skill">
 
-            <img class="ionicon" src="c.svg" alt="Java" />
+            <img class="ionicon" src="c.svg" alt="C++" />
+        </div>
+    
+    </div>
+    <div class="skillset tech">
+        <div id="particle3">
+        </div>
+        <h6>Technical</h6>
+    </div>
+    <div id="flexskillTechcont">
+        <div class="skill">
+            <img class="ionicon" src="bxl-html5.svg" alt="html" />
+             
+        </div>
+        <div class="skill">
+            <img class="ionicon" src="bxl-css3.svg" alt="css" />
+        </div>
+        <div class="skill">
+
+            <img class="ionicon" src="bxl-git.svg" alt="git" />
         </div>
     
     </div>
@@ -163,7 +189,7 @@
     let mode = sessionStorage.getItem('jec.color-scheme');
 
 function checkPreference(query) {
-    var classList = ['.gradient','.contactcont','body','#AboutMe','#boutmecont','#Projects','.projs','.skill',
+    var classList = ['.gradient','.bg','.contactcont','body','#AboutMe','#boutmecont','#Projects','.projs','.skill',
         'h6','p','a','.fa-github','#boutmecont a .fa-file-text','.skillset','.projs .fa-github','#Skills','#nav'];
             
 
@@ -191,6 +217,7 @@ function checkPreference(query) {
                 $('.projs').toggleClass('dark'),
                 $('.skill').toggleClass('dark'),
                 $('.skillset').toggleClass('dark'),
+                $('.bg').toggleClass('dark'),
                 $('h6').toggleClass('dark'),
                 $('p').toggleClass('dark'),
                 $('a').toggleClass('dark'),
@@ -218,6 +245,7 @@ function checkPreference(query) {
                 $('p').toggleClass('light'),
                 $('a').toggleClass('light'),
                 $('.skillset').toggleClass('light'),
+                $('.bg').toggleClass('light'),
                 $('.fa-github').toggleClass('light'),
                 $('#nav').toggleClass('light'),
                 $('#Skills').toggleClass('light'),
@@ -258,7 +286,7 @@ preference_query.addListener(checkPreference);
 
            
 
-            var classList = ['.gradient','.contactcont','body','#AboutMe','#boutmecont','#Projects','.projs','.skill',
+            var classList = ['.gradient','.bg','.contactcont','body','#AboutMe','#boutmecont','#Projects','.projs','.skill',
         'h6','p','a','.fa-github','#boutmecont a .fa-file-text','.skillset','.projs .fa-github','#Skills','#nav'];
            
 
@@ -283,6 +311,7 @@ preference_query.addListener(checkPreference);
                 $('.skill').toggleClass('dark'),
                 $('a').toggleClass('dark'),
                 $('.skillset').toggleClass('dark'),
+                $('.bg').toggleClass('dark'),
                 $('#Skills').toggleClass('dark'),
                 $('.fa-github').toggleClass('dark'),
                 $('#nav').toggleClass('dark');
@@ -313,6 +342,7 @@ preference_query.addListener(checkPreference);
                 $('#Projects').toggleClass('light'),
                 $('.projs').toggleClass('light'),
                 $('.skillset').toggleClass('light'),
+                $('.bg').toggleClass('light'),
                 $('h6').toggleClass('light'),
                 $('.skill').toggleClass('light'),
                 $('p').toggleClass('light'),

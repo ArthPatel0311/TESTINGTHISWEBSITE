@@ -1,7 +1,8 @@
 
 @media (prefers-color-scheme: dark) {
 .gradient,
-.contactcont {
+.contactcont,
+.skillset {
   background: linear-gradient(
   120deg,
     rgb(142,120,104),
@@ -53,7 +54,8 @@ body{
 }
 
 .gradient.dark,
-.contactcont.dark {
+.contactcont.dark,
+.skillset.dark, .bg.dark {
 
   background: radial-gradient(
     circle at 65%,
@@ -69,14 +71,14 @@ body{
     #4FA2C7,
     #000002,
     black
- 
+  
 
 
     
   );
 
   background-size: 1150% 1150%;
- 
+  animation: grad 29s ease-in-out infinite;
 
 
 
@@ -111,13 +113,15 @@ body.dark{
   color: white;
 }
 
-.projs.dark, .skill.dark, .skillset.dark {
+.projs.dark, .skill.dark{
   background-color: #1c1c1e;
   box-shadow: 0px 0px 23px 3.3px rgb(65, 65, 65);
 }
 .skillset.dark {
   box-shadow: 0px 0px 23px 4.4px rgb(65, 65, 65);
 }
+
+
 #nav.dark {
   background: linear-gradient(#000002,hsla(0,0%,0%,0));
 }
