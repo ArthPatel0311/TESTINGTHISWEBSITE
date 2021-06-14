@@ -10,10 +10,12 @@
     
     <script src="https://kit.fontawesome.com/0e784927ba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="dark.css"/>
+    <link rel="stylesheet" href="light.css"/>
+   
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
       rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone"
-      rel="stylesheet">
+    
     
 </head>
 <body>
@@ -24,15 +26,15 @@
         <button class = "buttondark buttondark2"> <i class="fas fa-adjust adjust" id = "icon" style="font-size: 1.5em;"></i>
         </button>
         
-        <a href="#"><button > <i class="material-icons-outlined home" id = "icon" style="font-size: 2rem;">home</i></button>
+        <a href="#"><button > <i class="material-icons-outlined home" id = "icon" style="font-size: 2rem; color: black;">home</i></button>
         </a>
         <a href="#dropmenu" id= "dropmenu">&#x3c;Arth Patel/&#x3e;    
         <div class="navitems">
         <ul id= "links"  >
             <li><a href="#boutmecont" class="link">Me</a></li>
-            <li><a href="#wrap" class="link">Projects</a></li>
-            <li><a href="#" class="link">Resume</a></li>
-            <li><a href="#contact" class="link">Contact</a></li>
+            <li><a href="" class="link">Projects</a></li>
+            <li><a href="ArthResume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume" class="link">Resume</a></li>
+            <li><a href="mailto:patelarth0311@gmail.com" class="link">Contact</a></li>
             
         </ul>
         </div>
@@ -47,9 +49,6 @@
     </div>
 
         <div id="orbit-container">
-
-
-
         <div class="Cont">
             <h6 id="name">Arth Patel</h6>
         <a href="https://github.com/patelarth0311" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x" style="font-size: 6.6rem;"></i></a>
@@ -59,27 +58,27 @@
 
 
 <div id="boutmecont">
-        <div id = "AboutMe" >
-            <h6>Me</h6>
-            <p> Creator, Developer, Student </p>      
-            <a href="#"><i class="fa fa-file-text" aria-hidden="true" style="font-size: 2.5rem;"></i></a>
-        </div>
+    <h6>Me</h6>
+    <p> Developer, creator and student who enjoys turning his imaginations into something
+        tangible. </p> 
+        <a href="ArthResume.pdf" target="_blank" rel="noopener noreferrer" ><i class="fa fa-file-text" aria-hidden="true" style="font-size: 2.5rem;"></i></a>
     </div>
-
     <div class="projcont">
         <div id="Projects">
 <div id = "Proj">
     <h6>Projects</h6>
     <p>See some of my works!</p>
-    <a href="https://github.com/patelarth0311" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x"
+    <a href="https://github.com/patelarth0311?tab=repositories" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x"
             style="font-size: 3rem;"></i></a>
 </div>
+
 </div>
-<div id ="wrap">
+
 <div class="flexcont">
     <div class="projs"><h6>Demon Slayer Pac-Man</h6>
-    <img src ="https://i.postimg.cc/Kzzm2gW3/PacManDs.png" alt="Demon Slayer Pac-Man" width = "180"
-    height = "180">   <a href="" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x"
+        <p>A JavaFx implementation of Pac-Man.</p>
+    <img src ="https://i.postimg.cc/Kzzm2gW3/PacManDs.png" alt="Demon Slayer Pac-Man" width = "190"
+    height = "190">   <a href="https://github.com/patelarth0311/DemonSlayerPacMan" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-0x"
         style="font-size: 2.5rem;"></i></a>
     </div>
     <div class="projs"></div>
@@ -87,14 +86,39 @@
     <div class="projs"></div>
 
 </div>
+
 </div>
+
+<div id = "Skillscont">
+    <div id = "Skills">
+        <h6>Skills</h6>
+    </div>
+    <div class="skillset">
+        <h6>Languages</h6>
+    </div>
+    <div id="flexskillcont">
+        <div class="skill">
+
+            <img class="ionicon" src="logo-javascript.svg" alt="Java" />
+             
+        </div>
+        <div class="skill">
+            <img class="ionicon" src="java.svg" alt="Java" />
+        </div>
+        <div class="skill">
+
+            <img class="ionicon" src="c.svg" alt="Java" />
+        </div>
+    
+    </div>
+
 </div>
+
 <div class="contactcont">
     <div id="particle2">
     </div>
     <div id="contact">
         <h6>Contact</h6>
-        <p>Reach out!</p>
         <a href="mailto:patelarth0311@gmail.com"><i class="fas fa-envelope" style="font-size: 3rem;"></i></a>
     </div>
     
@@ -122,59 +146,225 @@
 
 
 <script>
-   
+
+
     $(document).ready(function () {
+
+        const navItems = document.querySelectorAll('#links li a');
+            const icon = document.querySelectorAll("#icon");
+            var menu = document.getElementById('dropmenu');
+
+        var preference_query = window.matchMedia('(prefers-color-scheme: dark)');
+        const DARK = 'dark';
+    const LIGHT = 'light';
+    const isSystemDarkMode = matchMedia &&
+        matchMedia('(prefers-color-scheme: dark)').matches;
+ 
+    let mode = sessionStorage.getItem('jec.color-scheme');
+
+function checkPreference(query) {
+    var classList = ['.gradient','.contactcont','body','#AboutMe','#boutmecont','#Projects','.projs','.skill',
+        'h6','p','a','.fa-github','#boutmecont a .fa-file-text','.skillset','.projs .fa-github','#Skills','#nav'];
+            
+
+
+	if (query.matches) {
+	
+        for (var i = 0; i < icon.length; i++) {
+                    icon[i].style.color = "white";
+                }
+                navItems.forEach((link, index) => {
+
+                    link.style.color = "white";
+                });
+
+                menu.style.color = "white";
+        for (var i = 0; i < classList.length; i++) {
+                    $(classList[i]).not(this).removeClass('light');
+                }
+        $('.gradient').toggleClass('dark'),
+                $('.contactcont').toggleClass('dark'),
+                $('body').toggleClass('dark'),
+                $('#AboutMe').toggleClass('dark'),
+                $('#boutmecont').toggleClass('dark'),
+                $('#Projects').toggleClass('dark'),
+                $('.projs').toggleClass('dark'),
+                $('.skill').toggleClass('dark'),
+                $('.skillset').toggleClass('dark'),
+                $('h6').toggleClass('dark'),
+                $('p').toggleClass('dark'),
+                $('a').toggleClass('dark'),
+                $('.fa-github').toggleClass('dark'),
+                $('#nav').toggleClass('dark'),
+                $('#Skills').toggleClass('dark'),
+                $('.fa-file-text').toggleClass('dark');
+               
+                mode = DARK;
+	} else {
+       
+        for (var i = 0; i < classList.length; i++) {
+                    $(classList[i]).not(this).removeClass('dark');
+                }
+                mode = LIGHT;
+		$('.gradient').toggleClass('light'),
+                $('.contactcont').toggleClass('light'),
+                $('body').toggleClass('light'),
+                $('#AboutMe').toggleClass('light'),
+                $('#Projects').toggleClass('light'),
+                $('.projs').toggleClass('light'),
+                $('.skill').toggleClass('light'),
+                $('h6').toggleClass('light'),
+                $('#boutmecont').toggleClass('light'),
+                $('p').toggleClass('light'),
+                $('a').toggleClass('light'),
+                $('.skillset').toggleClass('light'),
+                $('.fa-github').toggleClass('light'),
+                $('#nav').toggleClass('light'),
+                $('#Skills').toggleClass('light'),
+                $('.fa-file-text').toggleClass('light');
+                for (var i = 0; i < icon.length; i++) {
+                    icon[i].style.color = "rgba(0,0,0,.5)";
+                }
+                navItems.forEach((link, index) => {
+
+                    link.style.color = "black";
+                });
+
+                menu.style.color = "black";
+	}
+}
+
+checkPreference(preference_query);
+preference_query.addListener(checkPreference);
+      
+
 
         $('.buttondark').click(function () {
 
-    
-       var blacknav = $('#boutmecont').offset().top;
+            var blacknav = $('#boutmecont').offset().top;
             var blacknavHeight = $('#boutmecont').height();
-
-
-            var blacknav2 = $('#wrap').offset().top;
-            var blacknav2Height = $('#wrap').height();
-
+         
             var menu_pos = $('#dropmenu').offset().top;
             var menu_height = $('#dropmenu').height();
-
-
-            var scroll = $(window).scrollTop();
+          
             var menu = document.getElementById('dropmenu');
-
             const navItems = document.querySelectorAll('#links li a');
             exists = document.querySelector("body.dark");
             const icon = document.querySelectorAll("#icon");
 
+            var blacknav = $('#boutmecont').offset().top;
             
+            var nav_bottom = $('#nav').height() + $('#nav').position().top;
+
+           
+
+            var classList = ['.gradient','.contactcont','body','#AboutMe','#boutmecont','#Projects','.projs','.skill',
+        'h6','p','a','.fa-github','#boutmecont a .fa-file-text','.skillset','.projs .fa-github','#Skills','#nav'];
+           
+
+            $('.adjust').toggleClass('flip');
+           
+           
+            if ( mode == LIGHT)  {
+               
+                for (var i = 0; i < classList.length; i++) {
+                    $(classList[i]).not(this).removeClass('light');
+                }
               
                 $('.gradient').toggleClass('dark'),
-                $('.moon').toggleClass('dark'),
                 $('.contactcont').toggleClass('dark'),
                 $('body').toggleClass('dark'),
                 $('#AboutMe').toggleClass('dark'),
+                $('#boutmecont').toggleClass('dark'),
                 $('#Projects').toggleClass('dark'),
                 $('.projs').toggleClass('dark'),
                 $('h6').toggleClass('dark'),
                 $('p').toggleClass('dark'),
+                $('.skill').toggleClass('dark'),
                 $('a').toggleClass('dark'),
-                $('.adjust').toggleClass('flip');
-                $('.fa-github').toggleClass('dark');
-                $('#AboutMe a .fa-file-text').toggleClass('dark')
-        
-                if (menu_pos > blacknav && (menu_pos < blacknavHeight + blacknav2Height + blacknav2 + blacknav) && exists == null) {
-                      
-                        menu.style.color = "white";
+                $('.skillset').toggleClass('dark'),
+                $('#Skills').toggleClass('dark'),
+                $('.fa-github').toggleClass('dark'),
+                $('#nav').toggleClass('dark');
+                mode = DARK;
+                var color = "white";
+                    if ($('body').css('background-color') !== 'rgb(0, 0, 2)') {
+                        color = "rgba(0,0,0,.6)";
+                    }
+                        menu.style.color = color;
                     for (var i = 0; i < icon.length; i++) {
-                        icon[i].style.color = "white";
+                        icon[i].style.color = color;
                     }
                     navItems.forEach((link, index) => {
 
-                        link.style.color = "white";
-
+                        link.style.color =color;
                     });
-                } else if (menu_pos > blacknav && (menu_pos < blacknavHeight + blacknav2Height + blacknav2 + blacknav) && exists != null) {
-                              for (var i = 0; i < icon.length; i++) {
+        
+}    else if ( mode == DARK ) { 
+   
+    for (var i = 0; i < classList.length; i++) {
+                    $(classList[i]).not(this).removeClass('dark');
+                }
+                $('.gradient').toggleClass('light'),
+                $('.contactcont').toggleClass('light'),
+                $('body').toggleClass('light'),
+                $('#AboutMe').toggleClass('light'),
+                $('#boutmecont').toggleClass('light'),
+                $('#Projects').toggleClass('light'),
+                $('.projs').toggleClass('light'),
+                $('.skillset').toggleClass('light'),
+                $('h6').toggleClass('light'),
+                $('.skill').toggleClass('light'),
+                $('p').toggleClass('light'),
+                $('a').toggleClass('light'),
+                $('#Skills').toggleClass('light'),
+                $('.fa-github').toggleClass('light'),
+                $('#nav').toggleClass('light'),
+                $('#boutmecont a .fa-file-text').toggleClass('light');
+               mode = LIGHT;
+              
+                    if ($('body').css('background-color') !== 'rgb(0, 0, 2)') {
+                        color = "rgba(0,0,0,.6)";
+                    }
+                        menu.style.color = color;
+                    for (var i = 0; i < icon.length; i++) {
+                        icon[i].style.color = "rgba(0,0,0,.6)";
+                    }
+                    navItems.forEach((link, index) => {
+
+                        link.style.color =color;
+                    });
+           
+               
+                
+} 
+
+
+
+
+
+
+
+        
+               /* if ( mode == BLACK) {
+                
+                    var color = "white";
+                    if ($('body').css('background-color') !== 'rgb(0, 0, 2)') {
+                        color = "black";
+                    }
+                        menu.style.color = color;
+                    for (var i = 0; i < icon.length; i++) {
+                        icon[i].style.color = color;
+                    }
+                    navItems.forEach((link, index) => {
+
+                        link.style.color =color;
+                    });
+
+            
+                } else if (((nav_bottom > blacknav  ) && exists != null)) {
+                  
+                            for (var i = 0; i < icon.length; i++) {
                         icon[i].style.color = "black";
                     }
 
@@ -184,7 +374,8 @@
                         link.style.color = "black";
 
                     });
-                }
+                }*/
+                
 
         });
 
@@ -231,7 +422,7 @@
                     navLinks.forEach((link, index) => {
 
                     link.style.animation = `fade 1.5s ease-in forwards  ${index / 7}s `;
-
+                 
                     });
                     hideElem.style = 'display: flex, flex-direction:column';
                       
@@ -290,7 +481,9 @@
             }  
         }
             
-                
+
+
+              
             
     };
 }
@@ -301,38 +494,48 @@
 <script>
    
    
-$(document).ready(function () {
 
-    
+/*$(document).ready(function () {
+
+   
    
    var exists = document.querySelector("body.dark");
    
-
-
     
         $(window).scroll(function () {
             
           
             var blacknav = $('#boutmecont').offset().top;
             var blacknavHeight = $('#boutmecont').height();
-
-
             var blacknav2 = $('#wrap').offset().top;
             var blacknav2Height = $('#wrap').height();
+            var nav_pos = $('#nav').offset().top;
+            var nav_height = $('#nav').height();
 
-            var menu_pos = $('#dropmenu').offset().top;
-            var menu_height = $('#dropmenu').height();
+
+            var blacknav = $('#boutmecont').offset().top;
+            
+            var nav_bottom = $('#nav').height() + $('#nav').position().top;
+            console.log("bottom-> " + nav_bottom);
 
             
-            var scroll = $(window).scrollTop();
+           
+            var nav = document.getElementById('nav');
             var menu = document.getElementById('dropmenu');
             
-            const navItems = document.querySelectorAll('#links li a');
+            
              exists = document.querySelector("body.dark");
+             const navItems = document.querySelectorAll('#links li a');
             const icon = document.querySelectorAll("#icon");
 
+        
+
+             
            
-            if (menu_pos > blacknav && (menu_pos < blacknavHeight + blacknav2Height + blacknav2  + blacknav) && exists == null) {
+           
+
+            if ((nav_bottom > blacknav)  && exists == null 
+            && $("body").css('background-color') !="rgb(0, 0, 2)") {
                
 
                
@@ -340,7 +543,6 @@ $(document).ready(function () {
                     for (var i = 0; i < icon.length; i++) {
                         icon[i].style.color = "black";
                     }
-
                     menu.style.color = "black";
                     navItems.forEach((link, index) => {
 
@@ -350,23 +552,22 @@ $(document).ready(function () {
                 
             } 
 
-            else  {
+            else if (exists == null) {
              
-              
-                menu.style.color = "white";
+                menu.style.color = "black";
                  for (var i = 0; i < icon.length; i++) {
-                    icon[i].style.color = "white";
+                    icon[i].style.color = "black";
                 }
                 navItems.forEach((link, index) => {
 
-                    link.style.color = "white";
+                    link.style.color = "black";
 
                 });
             }
 
         })
         
-    })</script>
+    }) */</script>
 
 
 <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
@@ -381,14 +582,14 @@ $(document).ready(function () {
     messages.push('Hello');
     messages.push('مرحبا');
     messages.push('やあ');
-    messages.push('नमस्ते');
     messages.push('Привет');
+    messages.push('नमस्ते');
     messages.push('Bonjour');
+    messages.push('Kamusta');
     messages.push('આવો');
     messages.push('Hola');
     messages.push('Olá');
     messages.push('안녕하세요');
-    messages.push('Kamusta');
     messages.push('สวัสดี');
     messages.push('你好');
 
@@ -410,10 +611,13 @@ $(document).ready(function () {
     loop();
 
 
-
-
-
 });
+
+</script>
+
+<script>
+
+
 
 
 
@@ -421,6 +625,7 @@ $(document).ready(function () {
 
 
 </script>
+
 
 <script type="text/javascript" src="js/particles.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>

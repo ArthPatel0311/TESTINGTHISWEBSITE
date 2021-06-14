@@ -1,0 +1,127 @@
+@media (prefers-color-scheme: light) {
+
+    .gradient,
+.contactcont {
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(
+    120deg,
+     #C2B280,
+      #f5b700,
+      #a5be00,
+      #01ac9b,
+      rgb(36, 168, 196),
+      #0096c7,
+      rgb(213, 0, 253),
+      rgb(248, 55, 76),
+      rgb(251, 86, 7)
+  );
+
+
+  background-size: 1000% 1000%;
+
+}
+
+.fa-github,
+.fa-envelope,
+.fa-file-text,
+.home { 
+  color: rgb(255, 255, 255);
+}
+
+body {
+background-color: #fbfbfd;
+}
+
+#Projects h6,
+#Projects p,
+#boutmecont h6,
+#boutmecont p,
+#boutmecont a,
+.projs h6{
+  color: black;
+}
+
+ #Projects {
+    background-color: white;
+    box-shadow: 0px 0px 20px 6.6px grey;
+  }
+
+  .projs {
+    background-color: white;
+    box-shadow: 0px 0px 20px 3.3px grey;
+  }
+
+  #nav {
+    background: linear-gradient(rgba(251, 251, 253, 0.8),hsla(0,0%,95%,0));
+  }
+
+}
+
+  .gradient.light,
+  .contactcont.light {
+
+    background: linear-gradient(
+      120deg,
+      #f5b700,
+      #a5be00,
+      rgb(21, 189, 113),
+      #01ac9b,
+      rgb(36, 168, 196),
+      #0096c7,
+      rgb(213, 0, 253),
+      rgb(248, 55, 76),
+      rgb(251, 86, 7)
+    );
+  
+    background-size: 1000% 1000%;
+ 
+  }
+  
+  .fa-github.light,
+  .fa-envelope.light,
+  .fa-file-text.light,
+  .home.light { 
+    color: rgb(255, 255, 255);
+  }
+  
+  body.light {
+  background-color: #fbfbfd;
+  }
+  
+  #Projects h6.light,
+  #Projects p.light,
+  #boutmecont h6.light,
+  #boutmecont p.light,
+  #boutmecont a.light,
+  .projs h6.light,
+  .projs p.light,
+  #Skills h6.light,
+  .skillset h6.light{
+    color: black;
+  }
+  .projs .fa-github.light, #boutmecont a .fa-file-text.light,
+  #Proj .fa-github.light, #Proj .fa-github.light
+   {
+    color: black;
+  }
+  #nav.light {
+    background: linear-gradient(rgba(251, 251, 253, 0.8),hsla(0,0%,95%,0));
+  }
+
+
+ #Projects.light, #Skills.light {
+      background-color: white;
+      box-shadow: 0px 0px 23px 3.6px grey;
+    }
+    #boutmecont.light, #Skills.light {
+      background-color: white;
+    }
+    .projs.light, .skill.light, .skillset.light  {
+      background-color: white;
+      box-shadow: 0px 0px 20px 2.3px grey;
+    }
+    .skillset.light  {
+    box-shadow: 0px 0px 20px 2.6px grey;
+  }
+   
