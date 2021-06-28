@@ -1,0 +1,177 @@
+@media (prefers-color-scheme: light) {
+
+  .gradient,
+  .contactcont,
+  .skillset, .bg {
+
+    background: linear-gradient(
+      120deg,
+      #f5b700,
+      #a5be00,
+      rgb(21, 189, 113),
+      #01ac9b,
+      #52b69a,
+      rgb(36, 168, 196),
+      #0096c7,
+      #1a759f,
+      #ef476f,
+      #e76f51
+    );
+  
+   
+    background-size: 1000% 1000%;
+    
+  }
+  #Projects,.projs, #Skills, .skill {
+    background: rgba( 255, 255, 255, 0.10 );
+box-shadow: 0 0px 20px 3.3px grey;
+backdrop-filter: blur( 5.0px );
+-webkit-backdrop-filter: blur( 5.0px );
+border: 1px solid white;
+  }
+  .projs {
+   
+box-shadow: 0 0px 20px 3.3px grey;
+
+  }
+  
+  .fa-github,
+  .fa-envelope,
+  .fa-file-text,
+  .home { 
+    color: rgb(255, 255, 255);
+  }
+  
+  body {
+  background-color: #fbfbfd;
+  }
+  
+  #Projects h6,
+  #Projects p,
+  #boutmecont h6,
+  #boutmecont p,
+  #boutmecont a,
+  .projs h6,
+  .projs p,
+  #Skills h6,
+  .skill h6{
+    color: black;
+  }
+  .projs .fa-github, .file
+   {
+    color: black;
+  }
+
+  #Proj a .fa-github {
+    color: white;
+  }
+  .contactcont {
+    border-top: 1px solid white;
+  }
+
+#Skills{
+      box-shadow: 0px 0px 23px 3.6px grey;
+    }
+   
+    #boutmecont {
+      background-color: white;
+      border-bottom: 1px solid white;
+    }
+    .projs, .skill  {
+     
+      box-shadow: 0px 0px 20px 2.3px grey;
+    }
+    .skillset  {
+    box-shadow: 0px 0px 23px 4.4px grey;
+  }
+   
+}
+
+  .gradient.light,
+  .contactcont.light,
+  .skillset.light, .bg.light {
+
+    background: linear-gradient(
+      120deg,
+      #f5b700,
+      #a5be00,
+      rgb(21, 189, 113),
+      #01ac9b,
+      #52b69a,
+      rgb(36, 168, 196),
+      #0096c7,
+      #1a759f,
+      #9d4edd,
+      #ef476f,
+      #e76f51
+    );
+  
+   
+  
+    background-size: 1000% 1000%;
+
+  }
+  .contactcont.light {
+    border-top: 1px solid white;
+  }
+  
+  .fa-github.light { 
+    color: rgb(255, 255, 255);
+  }
+  
+  body.light {
+  background-color: #fbfbfd;
+  }
+
+
+  #Projects.light,  .projs.light, #Skills.light, .skill.light {
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 0 0px 20px 3.3px grey;
+    backdrop-filter: blur( 5.0px );
+    -webkit-backdrop-filter: blur( 5.0px );
+    border: 1px solid white;
+    
+  }
+  .projs.light {
+    
+box-shadow: 0 0px 20px 3.3px grey;
+  }
+
+  #Projects h6.light,
+  #Projects p.light,
+  #boutmecont h6.light,
+  #boutmecont p.light,
+  #boutmecont a.light,
+  .projs h6.light,
+  .projs p.light,
+  #Skills h6.light,
+  .skill h6.light{
+    color: black;
+  }
+  .projs .fa-github.light, .file.light
+   {
+    color: black;
+  }
+  
+
+
+ #Skills.light {
+      box-shadow: 0px 0px 23px 3.6px grey;
+    }
+  
+    #boutmecont.light {
+      background-color: white;
+      border-bottom: 1px solid white;
+    }
+ .skill.light  {
+      box-shadow: 0px 0px 20px 2.3px grey;
+    }
+    
+    .skillset.light  {
+    box-shadow: 0px 0px 23px 4.4px grey;
+  }
+  #Proj a .fa-github.light {
+    color: white;
+  }
+
+   

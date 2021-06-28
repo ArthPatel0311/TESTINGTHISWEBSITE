@@ -1,0 +1,175 @@
+
+@media (prefers-color-scheme: dark) {
+  .gradient,
+  .contactcont,
+  .skillset, .bg {
+  
+    background: radial-gradient(
+      circle at 65%,
+      black,
+    #000002,
+    #4FA2C7,
+    #6334AE,
+    #ae2872,
+    #971558,
+    #BA1F5C,
+    #b43a46,
+    #6334AE);
+     
+   
+      background-size: 1150% 1150%;
+
+  
+  }
+
+  .Cont .fa-github {
+    color: rgb(255, 255, 255);
+  }
+  
+  body{
+      background-color: #000002;
+    }
+  
+    #Projects {
+     
+      box-shadow: 0 0px 20px 3.3px rgb(65, 65, 65);
+    
+    }
+
+  #boutmecont{
+    background-color: #1c1c1e;
+    border-bottom: 1px solid rgb(65, 65, 65);
+  }
+ #Skills {
+  box-shadow: 0 0px 20px 3.3px rgb(65, 65, 65);
+    }
+    #Proj, .file, .projs .fa-github {
+      color: white;
+    }
+    #Proj a .fa-github {
+      color: #1c1c1e;
+    }
+  
+    #Projects h6,
+  #Projects p,
+  #boutmecont h6,
+  #boutmecont  p,
+  #boutmecont  a,
+  #Skills h6,
+  .projs h6,
+  .projs p,
+  .skillset h6,
+  .skill h6{
+    color: white;
+  }
+  .projs, #Skills, .skill,  #Projects{
+    background: rgba( 255, 255, 255, 0.10 );
+box-shadow: 0 0px 20px 3.3px rgb(65, 65, 65);
+backdrop-filter: blur( 10.0px );
+-webkit-backdrop-filter: blur( 10.0px );
+border: 1px solid rgb(65, 65, 65);
+  }
+  
+ .skill{
+    box-shadow: 0px 0px 23px 3.3px rgb(65, 65, 65);
+  }
+  .skillset {
+    box-shadow: 0px 0px 23px 5.4px rgb(65, 65, 65);
+  }
+  #Skills {
+    box-shadow: 0px 0px 23px 2.3px rgb(65, 65, 65);
+  }
+
+  
+
+}
+
+.gradient.dark,
+.contactcont.dark,
+.skillset.dark, .bg.dark {
+
+  background: radial-gradient(
+    circle at 65%,
+    black,
+    #000002,
+    #4FA2C7,
+    #6334AE,
+    #ae2872,
+    #971558,
+    #BA1F5C,
+    #b43a46,
+    #6334AE
+
+  
+
+    
+  );
+
+
+
+
+  background-size: 1150% 1150%;
+  
+}
+
+.contactcont {
+  border-top: 1px solid #1c1c1e;
+}
+#Project.dark,.projs.dark, #Skill.dark, .skill.dark  {
+  background: rgba( 255, 255, 255, 0.10 );
+  box-shadow: 0 0px 20px 3.3px rgb(65, 65, 65);
+  backdrop-filter: blur( 10.0px );
+  -webkit-backdrop-filter: blur( 10.0px );
+  border: 1px solid rgb(65, 65, 65);
+}
+
+.projs.dark {
+box-shadow: 0 0px 20px 3.3px rgb(65, 65, 65);
+}
+
+body.dark{
+    background-color: #000002;
+  }
+ 
+
+#boutmecont.dark{
+  background-color: #1c1c1e;
+}
+ #Skills.dark {
+  box-shadow: 0 0px 20px 3.3px rgb(65, 65, 65);
+  }
+  #Proj.dark, .file.dark, .projs .fa-github.dark  {
+    color: white;
+  }
+  #Proj a .fa-github.dark {
+    color: #1c1c1e;
+  }
+  
+
+  #Projects h6.dark,
+#Projects p.dark,
+#boutmecont h6.dark,
+#boutmecont  p.dark,
+#boutmecont  a.dark,
+#Skills h6.dark,
+.projs h6.dark,
+.projs p.dark,
+.skillset h6.dark,
+.skill h6.dark{
+  color: white;
+}
+
+ .skill.dark{
+  box-shadow: 0px 0px 23px 3.3px rgb(65, 65, 65);
+}
+.skillset.dark {
+  box-shadow: 0px 0px 23px 3.5px rgb(65, 65, 65);
+}
+
+
+
+
+
+.contactcont.dark {
+  border-top: 1px solid #1c1c1e;
+}
